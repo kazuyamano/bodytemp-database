@@ -14,9 +14,9 @@
       <br>
       <P><input type="submit" value="送る"></P>
     </form>
+    <br><br><p>[送信履歴]</p>
     <ul class="entries">
     {% for entry in entries %}
-      <p>送信履歴</p>
       <li>従業員コード：{{entry.title}} / 体温{{entry.text}}</li>
     {% endfor %}
     </ul>
