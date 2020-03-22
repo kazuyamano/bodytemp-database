@@ -5,9 +5,10 @@
   </head>
   <body>
     <form bgcolor="lightyellow" action="{{ url_for('add_entry') }}" method=post>
-      <input type="text" name="title">
-      <input type="text" name="text">
-      <input type="submit">
+      <br>
+      <p><input type="text" name="title"></p>
+      <p><input type="text" name="text"></p>
+      <P><input type="submit"></P>
     </form>
     <ul class="entries">
     {% for entry in entries %}
