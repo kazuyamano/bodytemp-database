@@ -3,16 +3,16 @@
   <head>
     <title>flask demo app</title>
   </head>
-  <body>
+  <body bgcolor="lightyellow">
     <br>
     <h1>検温しましたか〜</h1>
-    <form bgcolor="lightyellow" action="{{ url_for('add_entry') }}" method=post>
+    <form action="{{ url_for('add_entry') }}" method=post>
       <p>従業員コードは？
         <input type="text" name="title" maxlength="7"> ※半角英数字7桁で！</p>
       <p>今朝の体温は？　
         <input type="text" name="text" maxlength="4"> ※半角数字○○.○で！</p>
       <br>
-      <P><input type="submit" value="送る">></P>
+      <P><input type="submit" value="送る"></P>
     </form>
     <ul class="entries">
     {% for entry in entries %}
