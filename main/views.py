@@ -20,8 +20,8 @@ def show_entries():
 @app.route('/add', methods=['POST'])
 def add_entry():
     entry = Entry(
-        title = flask.request.form['title'],
-        text = flask.request.form['text']
+        title = flask.request.form['jcode'],
+        text = flask.request.form['temp']
     )
     db.session.add(entry)
     db.session.commit()
