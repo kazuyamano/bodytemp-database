@@ -1,4 +1,5 @@
 import flask 
+from main import app
 from main import app, db
 from main.models import Entry  #PostgreSQL向け追加
 
