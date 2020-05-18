@@ -6,9 +6,6 @@ from main.models import Entry
 # route() デコレータを使用し、ファンクションを起動するURLをFlaskに教えます。
 # そのファンクション名は特定のファンクションに対してURLを生成するためにも使われ、 
 # ファンクションはユーザーのブラウザ上で表示したいメッセージを返します。
-# @app.route('/')
-# def hello_world():
-#     return "Hello World!"
 
 @app.route('/')
 def show_entries():
