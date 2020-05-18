@@ -1,12 +1,12 @@
 # run.pyで、mainディレクトリのパッケージがimportされた際にこのスクリプトが実行されます。
 
 from flask import Flask 
-from flask_sqlalchemy import SQLAlchemy　 #PostgreSQL向け追加
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config.from_object('main.config') 　 #PostgreSQL向け追加
+app.config.from_object('main.config')
 
-db = SQLAlchemy(app) 　 #PostgreSQL向け追加
+db = SQLAlchemy(app)
 
 import main.views
 

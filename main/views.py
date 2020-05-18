@@ -1,11 +1,11 @@
 import flask 
 from main import app
 from main import app, db
-from main.models import Entry  #PostgreSQL向け追加
+from main.models import Entry
 
 @app.route('/')
 def show_entries():
-    entries = Entry.query.all()  #PostgreSQL向け追加
+    entries = Entry.query.all()
     return flask.render_template('entries.html', entries=entries)
 
 
