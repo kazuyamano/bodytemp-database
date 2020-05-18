@@ -1,19 +1,14 @@
 import flask 
 from main import app, db
-from main import app
-from main.models import Entry
-
-# route() デコレータを使用し、ファンクションを起動するURLをFlaskに教えます。
-# そのファンクション名は特定のファンクションに対してURLを生成するためにも使われ、 
-# ファンクションはユーザーのブラウザ上で表示したいメッセージを返します。
+from main.models import Entry  #PostgreSQL向け追加
 
 @app.route('/')
 def show_entries():
-    entries = Entry.query.all()
+    entries = Entry.query.all()  #PostgreSQL向け追加
     return flask.render_template('entries.html', entries=entries)
 
 
-# add_entry 関数の追加
+# htmlにフォームを設置し、そこからDBへ追加できるようにします。add_entry 関数の追加
 @app.route('/add', methods=['POST'])
 def add_entry():
     entry = Entry(
