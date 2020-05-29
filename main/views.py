@@ -1,3 +1,5 @@
+# __init__.pyで、main.viewsがimportされた際にこのスクリプトが実行されます。
+
 import flask 
 from main import app, db
 from main.models import Entry
