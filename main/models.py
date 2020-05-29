@@ -7,13 +7,17 @@ from datetime import datetime
 
 class Entry(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text)
-    text = db.Column(db.Text)
-    #created_at =db.Column(db.DateTime) ←仮置き。日付投入用
+    jcode = db.Column(db.String(7))
+    temp = db.Column(db.String(4))
+    date =db.Column(db.DateTime)
+    
+    def __init__(self, jcode=None, temp=None):
+        self.jcode= jcode
+        self.temp= temp
+        self.date= datetime.utcnow()
 
-    def __repr__(self):
-        return "<Entry id={} title={!r}>".format(self.id, self.title)
 
 
 def init():
     db.create_all()
+
