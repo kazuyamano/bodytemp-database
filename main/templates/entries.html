@@ -5,18 +5,18 @@
   </head>
   <body bgcolor="lightyellow">
     <br>
-    <h1>dateを加えてみた</h1>
+    <h1>もっくんさわちゃん</h1>
     <form action="{{ url_for('add_entry') }}" method=post>
       <p>従業員コードは？
-        <input type="text" name="jcode" maxlength="7">  ※半角英数字7桁で！</p>
+        <input type="text" name="title" maxlength="7">  ※半角英数字7桁で！</p>
       <p>今朝の体温は？　
-        <input type="text" name="temp" maxlength="4">  ※半角数字○○.○で！</p>
+        <input type="text" name="text" maxlength="4">  ※半角数字○○.○で！</p>
       <P><input type="submit" value="送る"></P>
     </form>
     <br><p>[送信履歴]</p>
     <ul class="entries">
     {% for entry in entries %}
-      <li>従業員コード：{{entry.jcode}} / 体温{{entry.temp}}</li>
+      <li>従業員コード：{{entry.title}} / 体温{{entry.text}}</li>
     {% endfor %}
     </ul>
   </body>
